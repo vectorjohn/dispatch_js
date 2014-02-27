@@ -11,7 +11,7 @@ module DispatchJs
   
   module LayoutHelper
     def dispatch
-      "data-controller=\"#{params[:controller]}\" data-action=\"#{params[:action]}\"".html_safe
+      "data-controller=\"#{params[:controller].parameterize.underscore}\" data-action=\"#{params[:action].parameterize.underscore}\"".html_safe
     end
   end
 end
